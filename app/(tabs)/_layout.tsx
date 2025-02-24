@@ -7,18 +7,15 @@ import PersonIcon from "@/components/SVG/PersonIcon";
 import FavoriteIcon from "@/components/SVG/FavoriteIcon";
 import SearchIcon from "@/components/SVG/SearchIcon";
 import IconWithDot from "@/components/ui/IconDot";
+import { Colors } from "@/constants/Colors"; // Import colors
 
 export default function TabLayout() {
-  const activeColor = "#FFFFFF";
-  const inactiveColor = "rgba(255, 255, 255, 0.5)";
-  const backgroundColor = "#4B5D3B";
-
   return (
     <Tabs
       screenOptions={{
-        tabBarShowLabel: false, 
+        tabBarShowLabel: false,
         tabBarStyle: {
-          backgroundColor: backgroundColor,
+          backgroundColor: Colors.backgroundColor,
           height: 70,
           justifyContent: "center",
           alignItems: "center",
@@ -27,8 +24,8 @@ export default function TabLayout() {
         tabBarItemStyle: {
           paddingTop: 15,
         },
-        tabBarActiveTintColor: activeColor,
-        tabBarInactiveTintColor: inactiveColor,
+        tabBarActiveTintColor: Colors.activeColor,
+        tabBarInactiveTintColor: Colors.inactiveColor,
         headerShown: false,
       }}
     >
@@ -47,7 +44,6 @@ export default function TabLayout() {
         name="Favorite"
         options={{
           tabBarIcon: ({ color, focused }) => (
-
             <IconWithDot
               icon={<FavoriteIcon size={24} color={color} />}
               focused={focused}
@@ -63,8 +59,6 @@ export default function TabLayout() {
         name="Search"
         options={{
           tabBarIcon: ({ color, focused }) => (
-           
-
             <IconWithDot
               icon={<SearchIcon size={24} color={color} />}
               focused={focused}

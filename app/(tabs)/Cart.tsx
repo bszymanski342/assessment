@@ -1,9 +1,8 @@
 import CartPage from "@/components/CartPage";
 import { useCart } from "@/context/CartContext";
 import { useState } from "react";
-import { Text, View } from "react-native";
 
-export default function TabTwoScreen() {
+export default function CartScreen() {
   const { cartItems, updateQuantity, removeItem } = useCart();
   const [promoCode, setPromoCode] = useState("");
   const DELIVERY_FEE = 200;

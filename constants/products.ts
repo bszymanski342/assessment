@@ -8,7 +8,8 @@ const images = [
 
 // Generate 45 products with random categories and matching names
 const products = Array.from({ length: 45 }).map((_, index) => {
-  const randomCategory = categories[Math.floor(Math.random() * categories.length)];
+  const randomCategory =
+    categories[Math.floor(Math.random() * categories.length)];
   return {
     id: (index + 1).toString(),
     name: `${randomCategory} Product ${index + 1}`, // Name includes category for clarity

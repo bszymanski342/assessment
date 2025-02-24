@@ -196,7 +196,7 @@ const SignUpForm: React.FC<SignUpFormProps> = ({
                       onPress={() => setShowPassword(!showPassword)}
                     >
                       <Text className="text-pantryGreen ml-2">
-                        {showPassword ? <EyeIcon /> : <EyeOpen />}
+                        {!showPassword ? <EyeIcon /> : <EyeOpen />}
                       </Text>
                     </TouchableOpacity>
                   </View>

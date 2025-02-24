@@ -36,7 +36,6 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
       return [...prev, { ...item, quantity: 1 }];
     });
     alert(`${item.name} has been added to your cart!`);
-    
   };
 
   // Update item quantity

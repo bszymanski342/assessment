@@ -16,24 +16,22 @@ export const FilterProvider = ({ children }: { children: ReactNode }) => {
   ]);
   const categories = ["All", "Beef", "Fish", "Pork", "Poultry"];
 
-
   const toggleCategory = (category: string) => {
     setSelectedCategories((prev) => {
       if (category === "All") {
         return ["All"]; // Always select "All" alone
       }
-  
+
       const isSelected = prev.includes(category);
       const newCategories = isSelected
         ? prev.filter((cat) => cat !== category) // Remove category
         : [...prev.filter((cat) => cat !== "All"), category]; // Add category, removing "All"
-  
+
       // Prevent deselecting all by ensuring at least one category remains selected
       return newCategories.length > 0 ? newCategories : prev;
     });
   };
-  
-  
+
   const filteredProducts = selectedCategories.includes("All")
     ? products
     : products.filter((product) =>

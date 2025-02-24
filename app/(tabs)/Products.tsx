@@ -9,10 +9,10 @@ const Products = () => {
   const { addToCart } = useCart();
 
   return (
-    <ProductListing 
-      filteredProducts={filteredProducts} 
-      toggleCategory={toggleCategory} 
-      addToCart={addToCart} 
+    <ProductListing
+      filteredProducts={filteredProducts}
+      toggleCategory={toggleCategory}
+      addToCart={addToCart}
       selectedCategories={selectedCategories} // Pass selectedCategories
       categories={categories} // Pass categories
     />
